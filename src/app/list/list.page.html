@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>list</ion-title>
+    <ion-title>List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+    <ion-card *ngFor="let item of data" (click)="openContent(item)">
+
+        <ion-card-header>
+            <ion-card-title>                
+                {{ item.title }}                
+            </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>                
+            Always the same content<br />
+            It is a bit longer and with linebreaks so that you have to scroll a bit<br />
+            Without scrolling, this example makes no sense
+        </ion-card-content>
+
+    </ion-card>
 
 </ion-content>
