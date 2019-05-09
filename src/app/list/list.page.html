@@ -6,7 +6,17 @@
 
 <ion-content>
 
-    <ion-card *ngFor="let item of data" (click)="openContent(item)">
+	<ion-input placeholder="Filter" [(ngModel)]="filterInput"></ion-input>
+	<ion-button (click)="filterButtonClick()">Filter list now</ion-button>
+
+	<ng-container *ngIf="curFilterText">
+		<br>
+		---------------------------------------<br>
+		Current filter: {{curFilterText}}<br>
+		---------------------------------------<br>
+	</ng-container>
+
+	<ion-card *ngFor="let item of data" (click)="openDetails(item)">
 
         <ion-card-header>
             <ion-card-title>                
