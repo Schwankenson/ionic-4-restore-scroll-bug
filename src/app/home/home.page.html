@@ -8,7 +8,34 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  	<h1>Ionic 4 scroll restore bug demo app</h1>
+    <p>This demo project demonstrates a problem with Ionic 4 scrolling restore</p>
+    <h2>Restore scroll position works here</h2>
+    <ol>
+    	<li>Go to <a href='/list' target='_blank'>/list</a></li>
+    	<li>Scroll to the bottom of the list</li>
+    	<li>Click on Item 10</li>
+    	<li>On the detail page click on button "back"</li>
+    	<li>Scroll restore works: You are at the same scroll position in the list view</li>
+    </ol>
+    <h2>Restore scroll position does NOT work here</h2>
+    <ol>
+    	<li>Go to <a href='/list' target='_blank'>/list</a></li>
+    	<li>Enter something in the filter input field and click button "Filter list now"</li>
+    	<li>Filtering is done by changing the route without reloading the component. This is done by defining RouteReuseRules in app.module.ts</li>
+    	<li>Scroll down and click on item 10</li>
+    	<li>On the detail page click on button "back"</li>
+    	<li>You land at the top of the list page. Scroll position has not been restoren</li>
+    </ol>
+
+    <h2>Why I want to change URL/Route when filtering</h2>
+    <p>I want the user to be able to copy the URL of the current filter and share it</p>
+
+		<h2>Why I want to reuse component</h2>
+    <p>I do not like the flickering when component is reloaded. And in my real app, I have filter parameters in the URL which need a server request to get more infos about them. So I would have to do a server request for data I already have.</p>
+
+		<h2>Why don`t you use location.go</h2>
+    <p>I tried to do the location change with location.go() function. Result is the same. And I do not like the idea of working against the route logic of my app</p>
+
   </div>
 </ion-content>
