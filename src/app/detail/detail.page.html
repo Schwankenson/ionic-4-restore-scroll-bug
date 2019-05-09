@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detail</ion-title>
+    <ion-title>Detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
+	<ion-button (click)="location.back()">Back to list</ion-button>
+
+	<ng-container *ngIf="curItem">
+		<h1>{{ curItem.title }} (ID: {{ curItem.id }})</h1>
+		<p>Not really much to see here</p>		
+	</ng-container>
+		
 </ion-content>
