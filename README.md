@@ -4,20 +4,22 @@ This demo project demonstrates a problem with Ionic 4 scrolling restore
 
 ## Restore scroll position works here
 
-1.  Go to [/list](/list)
-2.  Scroll to the bottom of the list
-3.  Click on Item 10
-4.  On the detail page click on button "back"
-5.  Scroll restore works: You are at the same scroll position in the list view
+1.  Start app
+2.  Go to [localhost:8000/list](localhost:8000/list)
+3.  Scroll to the bottom of the list
+4.  Click on Item 10
+5.  On the detail page click on button "back"
+6.  Scroll restore works: You are at the same scroll position in the list view
 
 ## Restore scroll position does NOT work here
 
-1.  Go to [/list](/list)
-2.  Enter something in the filter input field and click button "Filter list now"
-3.  Filtering is done by changing the route without reloading the component. This is done by defining RouteReuseRules in app.module.ts
-4.  Scroll down and click on item 10
-5.  On the detail page click on button "back"
-6.  You land at the top of the list page. Scroll position has not been restoren
+1.  Start app
+2.  Go to [localhost:8000/list](localhost:8000/list)
+3.  Enter something in the filter input field and click button "Filter list now"
+4.  Filtering is done by changing the route without reloading the component. This is done by defining RouteReuseRules in app.module.ts
+5.  Scroll down and click on item 10
+6.  On the detail page click on button "back"
+7.  You land at the top of the list page. Scroll position has not been restoren
 
 ## Why I want to change URL/Route when filtering
 
