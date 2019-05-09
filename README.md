@@ -32,3 +32,7 @@ I do not like the flickering when component is reloaded. And in my real app, I h
 ## Why don`t you use location.go
 
 I tried to do the location change with location.go() function. Result is the same. And I do not like the idea of working against the route logic of my app
+
+## Posted this app on
+[https://forum.ionicframework.com/t/restore-scroll-position-in-ionic-4-does-not-work-if-i-changed-the-route-with-route-reuse-before/163529](Ionic forum)
+[https://stackoverflow.com/questions/56065448/restore-scroll-position-in-ionic-4-does-not-work-if-i-changed-the-route-with-rou](Stackoverflow)
