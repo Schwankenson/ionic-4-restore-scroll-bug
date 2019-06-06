@@ -36,3 +36,5 @@ I tried to do the location change with location.go() function. Result is the sam
 ## Posted this app on
 [Ionicforum](https://forum.ionicframework.com/t/restore-scroll-position-in-ionic-4-does-not-work-if-i-changed-the-route-with-route-reuse-before/163529)
 [Stackoverflow](https://stackoverflow.com/questions/56065448/restore-scroll-position-in-ionic-4-does-not-work-if-i-changed-the-route-with-rou)
+[Ionic issues](https://github.com/ionic-team/ionic/issues/18251)
+
